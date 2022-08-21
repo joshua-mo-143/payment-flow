@@ -40,20 +40,20 @@ button {
 .payment-gateway-form .payment-header {
   font-size: 36px;
 }
-.payment-gateway-form .personal-info, .payment-gateway-form .card-details-2, .payment-gateway-form .card-details-1 {
+.payment-gateway-form .personal-info, .payment-gateway-form .card-details-container .card-details-2, .payment-gateway-form .card-details-container .card-details-1 {
   outline: none;
   border: none;
   display: flex;
   flex-direction: column;
   gap: 2em;
 }
-.payment-gateway-form .personal-info .field-header, .payment-gateway-form .card-details-2 .field-header, .payment-gateway-form .card-details-1 .field-header {
+.payment-gateway-form .personal-info .field-header, .payment-gateway-form .card-details-container .card-details-2 .field-header, .payment-gateway-form .card-details-container .card-details-1 .field-header {
   text-align: left;
 }
-.payment-gateway-form .personal-info .field-header h5, .payment-gateway-form .card-details-2 .field-header h5, .payment-gateway-form .card-details-1 .field-header h5 {
+.payment-gateway-form .personal-info .field-header h5, .payment-gateway-form .card-details-container .card-details-2 .field-header h5, .payment-gateway-form .card-details-container .card-details-1 .field-header h5 {
   color: #817E9E;
 }
-.payment-gateway-form .personal-info .field-header .text-input, .payment-gateway-form .card-details-2 .field-header .text-input, .payment-gateway-form .card-details-1 .field-header .text-input {
+.payment-gateway-form .personal-info .field-header .text-input, .payment-gateway-form .card-details-container .card-details-2 .field-header .text-input, .payment-gateway-form .card-details-container .card-details-1 .field-header .text-input {
   margin-top: 10px;
   display: block;
   width: 50em;
@@ -75,7 +75,7 @@ button {
 .payment-gateway-form .location .field-header .text-input {
   margin-top: 10px;
   display: block;
-  width: 22em;
+  width: 80%;
   height: 50px;
   padding: 20px;
   font-size: 16px;
@@ -90,7 +90,7 @@ button {
   font-size: 16px;
   border-radius: 10px;
 }
-.payment-gateway-form .card-details-1 .field-header select {
+.payment-gateway-form .card-details-container .card-details-1 .field-header select {
   margin-top: 10px;
   display: block;
   width: 50em;
@@ -99,13 +99,13 @@ button {
   font-size: 16px;
   border-radius: 10px;
 }
-.payment-gateway-form .card-details-2 {
+.payment-gateway-form .card-details-container .card-details-2 {
   margin-top: 2em;
   display: flex;
   flex-direction: row;
   gap: 4.5em;
 }
-.payment-gateway-form .card-details-2 .cardnumber-input, .payment-gateway-form .card-details-2 .expirydate-input {
+.payment-gateway-form .card-details-container .card-details-2 .cardnumber-input, .payment-gateway-form .card-details-container .card-details-2 .expirydate-input {
   margin-top: 5px;
   flex: 8;
   border: 1px solid grey;
@@ -116,21 +116,21 @@ button {
   display: flex;
   justify-content: space-evenly;
 }
-.payment-gateway-form .card-details-2 .cardnumber-input .Split, .payment-gateway-form .card-details-2 .expirydate-input .Split {
+.payment-gateway-form .card-details-container .card-details-2 .cardnumber-input .Split, .payment-gateway-form .card-details-container .card-details-2 .expirydate-input .Split {
   border: none;
   width: 5em;
   text-align: center;
   outline: none;
 }
-.payment-gateway-form .card-details-2 .expirydate-input {
+.payment-gateway-form .card-details-container .card-details-2 .expirydate-input {
   margin-top: 5px;
   flex: 1;
   width: 100%;
 }
-.payment-gateway-form .card-details-2 .expirydate-input .Split {
+.payment-gateway-form .card-details-container .card-details-2 .expirydate-input .Split {
   width: 25px;
 }
-.payment-gateway-form .card-details-2 .cvv-input {
+.payment-gateway-form .card-details-container .card-details-2 .cvv-input {
   margin-top: 5px;
   flex: 1;
   display: block;
@@ -201,8 +201,7 @@ button {
 .payment-gateway-form .navigation {
   margin-top: 30px;
   display: flex;
-  align-content: flex-start;
-  align-items: center;
+  justify-content: flex-start;
   width: 52%;
   gap: 5em;
 }
@@ -270,4 +269,80 @@ button {
 }
 .progress-container .progress-text-container .right {
   flex: 1;
+}
+
+@media only screen and (max-width: 480px) {
+  .payment-gateway-form {
+    width: 25em;
+  }
+  .payment-gateway-form .progress-container {
+    display: none;
+  }
+  .payment-gateway-form .personal-info .field-header .text-input, .payment-gateway-form .card-details-container .card-details-1 .field-header .text-input, .payment-gateway-form .card-details-container .card-details-2 .field-header .text-input {
+    width: 20em;
+  }
+  .payment-gateway-form .location {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .payment-gateway-form .location .field-header .text-input {
+    width: 20em;
+  }
+  .payment-gateway-form .location .field-header select {
+    width: 20em;
+  }
+  .card-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-details-container .card-details-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-details-container .card-details-1 .field-header .text-input {
+    width: 20em;
+  }
+  .card-details-container .card-details-1 .field-header select {
+    max-width: 20em;
+  }
+  .card-details-container .card-details-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+  .card-details-container .card-details-2 .field-header .cardnumber-input, .payment-gateway-form .card-details-container .card-details-2 .field-header .expirydate-input {
+    max-width: 20em;
+  }
+  .card-details-container .card-details-2 .field-header .cardnumber-input .Split, .payment-gateway-form .card-details-container .card-details-2 .field-header .expirydate-input .Split {
+    width: 3em;
+  }
+  .confirmation-wrapper {
+    width: 50rem;
+  }
+  .confirmation-wrapper .confirmation-container {
+    height: 20em;
+    width: 100%;
+  }
+  .confirmation-wrapper .confirmation-container .invoice .order-list {
+    font-size: 12px;
+  }
+  .navigation {
+    margin: 0;
+    width: 10em;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation button {
+    margin: 0;
+    width: 10em;
+  }
 }/*# sourceMappingURL=style.css.map */

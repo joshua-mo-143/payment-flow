@@ -37,6 +37,7 @@ button {
     z-index: -1;
 }
 
+// form
 .payment-gateway-form {
     width: 80%;
     margin: 0 auto;
@@ -45,23 +46,25 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+// header
 .payment-header {
     font-size: 36px;
 }
+// personal information
 .personal-info {
     outline: none;
     border: none;
     display: flex;
     flex-direction: column;
     gap: 2em;
+    // styling for labels
 .field-header {
     text-align: left;
     
 
     h5 {
         color: $smalltext-color;
-        
+// input boxes
     }
     .text-input {
         margin-top: 10px;
@@ -76,6 +79,7 @@ button {
 }
 }
 
+// loc
 .location {
     outline: none;
     border: none;
@@ -89,7 +93,7 @@ button {
         .text-input {
             margin-top: 10px;
             display: block;
-            width: 22em;
+            width: 80%;
             height: 50px;
             padding: 20px;
             font-size: 16px;
@@ -108,6 +112,10 @@ button {
     }
 }
 
+// card details
+.card-details-container {
+
+// name on card and type of card
 .card-details-1 {
     @extend .personal-info;
 
@@ -170,6 +178,7 @@ button {
         }
     
         
+}
 }
     .order-container {
         width: 40%;
@@ -237,8 +246,8 @@ button {
 .navigation {
     margin-top: 30px;
     display: flex;
-    align-content: flex-start;
-    align-items: center;
+    justify-content: flex-start;
+    // align-items: center;
     width: 52%;
     gap: 5em;
     p {
@@ -311,4 +320,105 @@ button {
             flex: 1;
         }
     }
+}
+
+@media only screen and (max-width: 480px) {
+    .payment-gateway-form {
+        width: 25em;
+
+        .progress-container {
+            display: none;
+        }
+    .personal-info {
+        .field-header {
+            .text-input {
+                  width: 20em;
+    }
+}
+    }
+
+    .location {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+        .field-header {
+            .text-input {
+                width: 20em;
+            }
+            select {
+                width: 20em;
+            }
+        }
+        
+    }
+}
+
+.card-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card-details-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .field-header {
+            .text-input {
+                width: 20em;
+            }
+            select {
+                
+                max-width: 20em;
+            }
+        }
+    }
+    .card-details-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        flex-wrap: wrap;
+        .field-header {
+            .cardnumber-input {
+                max-width: 20em;
+                .Split {
+                    width: 3em;
+                }
+            }
+        }
+    }
+}
+.confirmation-wrapper {
+    width: 50rem;
+    .confirmation-container {
+    height: 20em;
+    width: 100%;
+    .invoice {
+        .order-list {
+            font-size: 12px;
+            .order-item {
+
+                p {
+                
+            }
+            }
+        }
+    }
+    }
+}
+.navigation {
+    margin: 0;
+    width: 10em;
+    align-items: center;
+    justify-content: center;
+    button {
+        margin: 0;
+        width: 10em;
+    }
+}
+
+
 }
