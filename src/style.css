@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Product Sans", sans-serif;
+  color: black;
+}
+
+button {
+  background: linear-gradient(180deg, #F2C94C 0%, #F2994A 100%);
+  border: none;
+  border-radius: 10px;
+  width: 10em;
+  height: 3em;
+  color: white;
+}
+
+.backgroundSkew {
+  width: 100%;
+  position: absolute;
+  height: 2000.5px;
+  background: linear-gradient(180deg, rgba(242, 201, 76, 0.2) 0%, rgba(242, 153, 74, 0.2) 100%);
+  transform: skewY(-15deg) translateY(-1700px);
+  z-index: -1;
+}
+
+.payment-gateway-form {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.payment-gateway-form .payment-header {
+  font-size: 36px;
+}
+.payment-gateway-form .personal-info, .payment-gateway-form .card-details-2, .payment-gateway-form .card-details-1 {
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.payment-gateway-form .personal-info .field-header, .payment-gateway-form .card-details-2 .field-header, .payment-gateway-form .card-details-1 .field-header {
+  text-align: left;
+}
+.payment-gateway-form .personal-info .field-header h5, .payment-gateway-form .card-details-2 .field-header h5, .payment-gateway-form .card-details-1 .field-header h5 {
+  color: #817E9E;
+}
+.payment-gateway-form .personal-info .field-header .text-input, .payment-gateway-form .card-details-2 .field-header .text-input, .payment-gateway-form .card-details-1 .field-header .text-input {
+  margin-top: 10px;
+  display: block;
+  width: 50em;
+  height: 50px;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.payment-gateway-form .location {
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  gap: 6em;
+}
+.payment-gateway-form .location .field-header {
+  flex: 1;
+}
+.payment-gateway-form .location .field-header .text-input {
+  margin-top: 10px;
+  display: block;
+  width: 22em;
+  height: 50px;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.payment-gateway-form .location .field-header select {
+  margin-top: 10px;
+  display: block;
+  width: 22em;
+  height: 50px;
+  padding: 0px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.payment-gateway-form .card-details-1 .field-header select {
+  margin-top: 10px;
+  display: block;
+  width: 50em;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.payment-gateway-form .card-details-2 {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  gap: 4.5em;
+}
+.payment-gateway-form .card-details-2 .cardnumber-input, .payment-gateway-form .card-details-2 .expirydate-input {
+  margin-top: 5px;
+  flex: 8;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  background: white;
+  width: 30em;
+  display: flex;
+  justify-content: space-evenly;
+}
+.payment-gateway-form .card-details-2 .cardnumber-input .Split, .payment-gateway-form .card-details-2 .expirydate-input .Split {
+  border: none;
+  width: 5em;
+  text-align: center;
+  outline: none;
+}
+.payment-gateway-form .card-details-2 .expirydate-input {
+  margin-top: 5px;
+  flex: 1;
+  width: 100%;
+}
+.payment-gateway-form .card-details-2 .expirydate-input .Split {
+  width: 25px;
+}
+.payment-gateway-form .card-details-2 .cvv-input {
+  margin-top: 5px;
+  flex: 1;
+  display: block;
+  width: 5em;
+  height: 40px;
+  font-size: 13px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  text-align: center;
+}
+.payment-gateway-form .order-container {
+  width: 40%;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
+.payment-gateway-form .order-container .order-banner {
+  background: #2F80ED;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px 10px 0px 0px;
+}
+.payment-gateway-form .order-container .invoice {
+  background: white;
+  padding-bottom: 50px;
+  border-radius: 0px 0px 10px 10px;
+}
+.payment-gateway-form .order-container .invoice .order-list {
+  margin-top: -5px;
+  padding-top: 50px;
+  background: white;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.payment-gateway-form .order-container .invoice .order-list .order-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.payment-gateway-form .order-container .invoice .order-list .order-item .item-name {
+  text-align: left;
+  margin-left: 30px;
+}
+.payment-gateway-form .order-container .invoice .order-list .order-item .price {
+  text-align: right;
+  margin-right: 100px;
+}
+.payment-gateway-form .order-container .invoice hr {
+  width: 80%;
+  margin: 20px auto;
+}
+.payment-gateway-form .order-container .invoice .total-container {
+  margin-top: 50px;
+  margin-left: 0;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.payment-gateway-form .order-container .invoice .total-container .total-text {
+  margin-left: 20px;
+}
+.payment-gateway-form .order-container .invoice .total-container .total-amount {
+  margin-right: 20px;
+}
+.payment-gateway-form .navigation {
+  margin-top: 30px;
+  display: flex;
+  align-content: flex-start;
+  align-items: center;
+  width: 52%;
+  gap: 5em;
+}
+.payment-gateway-form .navigation p {
+  font-size: 20px;
+}
+
+.confirmation-wrapper {
+  width: 50em;
+  height: 30em;
+  background: white;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
+.confirmation-wrapper .confirmation-container {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 4em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.confirmation-wrapper .confirmation-container .tick-container {
+  border-radius: 50%;
+  background: white;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
+.confirmation-wrapper .confirmation-container p {
+  font-size: 1.2em;
+}
+.confirmation-wrapper .confirmation-container .home-link-container {
+  width: 100%;
+  text-align: left;
+}
+
+.progress-container .progress-text-container {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+}
+.progress-container .progress-text-container .left {
+  flex: 1;
+}
+.progress-container .progress-text-container .left .activetext {
+  font-weight: 700;
+  color: orange;
+}
+.progress-container .progress-text-container .left .active {
+  width: 60%;
+  height: 10px;
+  background: #F2994A;
+  border-radius: 10px;
+}
+.progress-container .progress-text-container .center {
+  flex: 1;
+}
+.progress-container .progress-text-container .center .activetext {
+  font-weight: 700;
+  color: orange;
+}
+.progress-container .progress-text-container .center .active {
+  border-radius: 10px;
+  width: 60%;
+  height: 10px;
+  background: #F2994A;
+}
+.progress-container .progress-text-container .right {
+  flex: 1;
+}/*# sourceMappingURL=style.css.map */
