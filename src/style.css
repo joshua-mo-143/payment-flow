@@ -142,7 +142,7 @@ button {
   text-align: center;
 }
 .payment-gateway-form .order-container {
-  width: 40%;
+  width: 50%;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
 }
 .payment-gateway-form .order-container .order-banner {
@@ -325,15 +325,29 @@ button {
   .card-details-container .card-details-2 .field-header .cardnumber-input .Split, .payment-gateway-form .card-details-container .card-details-2 .field-header .expirydate-input .Split {
     width: 3em;
   }
-  .confirmation-wrapper {
-    width: 50rem;
+  .order-container {
+    width: 10rem;
   }
-  .confirmation-wrapper .confirmation-container {
-    height: 20em;
-    width: 100%;
-  }
-  .confirmation-wrapper .confirmation-container .invoice .order-list {
+  .order-container .invoice .order-list {
+    margin: 0;
+    padding: 0;
     font-size: 12px;
+    gap: 1em;
+  }
+  .order-container .invoice .order-list .order-item {
+    justify-content: space-between;
+    gap: 2em;
+  }
+  .order-container .invoice .order-list .order-item .item-name {
+    margin: 0;
+    float: left;
+  }
+  .order-container .invoice .order-list .order-item .price {
+    margin: 0;
+    float: right;
+  }
+  .confirmation-wrapper {
+    width: 20rem;
   }
   .navigation {
     margin: 0;
